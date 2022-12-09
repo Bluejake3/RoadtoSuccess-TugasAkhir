@@ -125,8 +125,8 @@ label routinesMenu:
             jump acaraBesar
         else:
             jump nontonAcaraBesar
-    
-    
+    elif(turnsCounter == 95 and capital):
+        jump pameranUsaha
     
     jump showKegiatan
 

@@ -400,5 +400,37 @@ label nontonAcaraBesar:
                 $ stress -= 15
     jump showKegiatan
 
+label pameranUsaha:
+    scene campus with dissolve
+    "Kamu menerima pesan di HP-mu"
+    hp "Selamat siang, saya mewakili sebuah organisasi kewirausahaan mengundang anda untuk mengikuti pameran usaha yang akan dilaksanakan minggu ini"\
+    hp "Acara ini dapat mengenalkan produk anda pada pasar yang anda inginkan dan akan mengembangkan usaha anda"
+    hp "Ada biaya pendaftaran sejumlah 1000 unntuk membuka stand di pameran ini"
+    menu:
+        hp "Apakah anda bersedia untuk mengikuti pameran kewirausahaan yang akan di"
+
+        "Bersedia":
+            $ money -= 1000
+            $ levelUsahaModifier += 3
+            $ levelUsahaTotal = levelUsaha + levelUsahaModifier
+            hp "Baik. kami tunggu anda di hari pameran."
+            hp "Terima kasih"
+            hide scene campus with dissolve
+            "Di hari pameran"
+            scene exhibition with dissolve
+            "Kamu membuka stand untuk menjual produkmu"
+            $ money += (300 * levelUsahaTotal)
+            if(isIntrovert):
+                $ stress += 10
+            else:
+                $ stress += 8
+            "Kamu mendapatkan keuntungan dan pengalaman dari pameran ini"
+        "Tidak Bersedia":
+            hp "Baik, mohon maaf sudah mengganggu."
+
+    jump showKegiatan
+
+    
+
 
     

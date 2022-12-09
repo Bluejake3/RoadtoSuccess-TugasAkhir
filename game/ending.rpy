@@ -1,5 +1,5 @@
 label cumLaude:
-    scene conference with dissolve
+    scene conference with Dissolve(0.3)
     hide screen info_Updatehid
 
     "Kamu telah menyelesaikan studimu di kampus ini"
@@ -10,7 +10,7 @@ label cumLaude:
     return 
 
 label lulus:
-    scene conference with dissolve
+    scene conference with Dissolve(0.3)
     hide screen info_Update
 
     "Kamu telah menyelesaikan studimu di kampus ini"
@@ -21,7 +21,7 @@ label lulus:
     return
 
 label lanjutKuliah:
-    scene conference with dissolve
+    scene conference with Dissolve(0.3)
     hide screen info_Update
 
     "Kamu telah menyelesaikan studimu di kampus ini"
@@ -31,7 +31,7 @@ label lanjutKuliah:
     return
 
 label gagal:
-    scene messy with dissolve
+    scene messy with Dissolve(0.3)
     hide screen info_Update
 
     "Kamu gagal mencapai target yang ditentukan oleh kampusmu"
@@ -41,7 +41,7 @@ label gagal:
     return
 
 label miskin:
-    scene homeless with dissolve
+    scene homeless with Dissolve(0.3)
     hide screen info_Update
 
     "Kamu menggunakan seluruh uangmu hingga suatu hari kau menyadari bahwa uangmu sudah habis"
@@ -54,7 +54,7 @@ label miskin:
     return
 
 label gila:
-    scene street with dissolve
+    scene street with Dissolve(0.3)
     hide screen info_Update
 
     "Kamu tidak dapat menahan beratnya tekanan dalam kuliah"
@@ -66,7 +66,7 @@ label gila:
     return
 
 label penjara:
-    scene jail with dissolve
+    scene jail with Dissolve(0.3)
     hide screen info_Update
 
     "Kamu dibawa ke pengadilan atas tuntutan pengedaran obat terlarang"
@@ -77,7 +77,7 @@ label penjara:
     return
 
 label rehabilitasi:
-    scene rehab with dissolve
+    scene rehab with Dissolve(0.3)
     hide screen info_Update
 
     "Kamu dibawa ke pengadilan atas tuntutan penggunaan obat terlarang"
@@ -88,7 +88,7 @@ label rehabilitasi:
     return
 
 label overdosis:
-    scene grave with dissolve
+    scene grave with Dissolve(0.3)
     hide screen info_Update
 
     "Kamu terus memakai narkoba karena kamu merasa butuh untuk memakai narkoba"

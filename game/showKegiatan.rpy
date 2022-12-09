@@ -25,8 +25,8 @@ screen map:
             action ui.callsinnewcontext("infoLengkapLabel")
 
 label showKegiatan:
-    scene map with dissolve
-    call screen map with dissolve
+    scene maps with Dissolve(0.3)
+    call screen map with Dissolve(0.3)
 
     if _return == "bekerja":
         jump bekerja

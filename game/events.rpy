@@ -1,13 +1,13 @@
 label takeSavings:
     $ money += saving
-    scene bank with dissolve
+    scene bank with Dissolve(0.3)
     "Kamu mengambil tabunganmu sejumlah [saving] karena uang yang kamu bawa telah habis" 
     $ saving = 0
     return
 
 label takeCapitals:
     $ money += totalCapital
-    scene bank with dissolve
+    scene bank with Dissolve(0.3)
     "Kamu mengambil uang modalmu sejumlah [totalCapital] karena uang yang kamu bawa dan uang di tanbunganmu telah habis" 
     $ totalCapital = 0
     return
@@ -76,7 +76,7 @@ label evaluasi:
     jump endCheck
 
 label pelatihanKewirausahaan:
-    scene conference with dissolve
+    scene conference with Dissolve(0.3)
     "Kamu melihat sebuah acara tentang kewirausahaan"
 
     "Kamu tertarik untuk mengikuti acara itu, tetapi kamu takut acara itu mengganggu waktu istirahatmu"
@@ -104,8 +104,8 @@ label pelatihanKewirausahaan:
     jump showKegiatan
 
 label pembukaanKader:
-    scene field with dissolve
-    show senior with dissolve
+    scene field with Dissolve(0.3)
+    show senior with Dissolve(0.3)
 
     senior "Selamat datang di pembukaan kaderisasi departemen"
     senior "Dalam acara kaderisasi ini, kalian akan belajar tentang norma-norma yang berlaku di departemen ini"
@@ -122,13 +122,13 @@ label pembukaanKader:
         "Tidak":
             "Kamu memutuskan untuk tidak mengikuti kaderisasi"
 
-    scene bedroom with dissolve
+    scene bedroom with Dissolve(0.3)
     "Kamu membuka opsi bekerja 'Ambil Proyek'"
 
     jump showKegiatan
 
 label kader:
-    scene bedroom with dissolve
+    scene bedroom with Dissolve(0.3)
 
     "Minggu ini ada acara kaderisasi di departemen."
     menu:
@@ -137,7 +137,7 @@ label kader:
         "Ya":
             $ kaderisasi += 1
             $ stress += 3
-            scene classroom with dissolve
+            scene classroom with Dissolve(0.3)
             "Kamu memutuskan untuk mengikuti acara kaderisasi"
         "Tidak":
             "Kamu memutuskan untuk tidak mengikuti acara kaderisasi"
@@ -145,8 +145,8 @@ label kader:
     jump showKegiatan
 
 label pengangkatan:
-    scene conference with dissolve
-    show senior with dissolve
+    scene conference with Dissolve(0.3)
+    show senior with Dissolve(0.3)
     "Kamu dan teman-temanmu diundang ke sebuah acara penting oleh seniormu"
 
     senior "Hari ini adalah hari yang spesial bagi kalian semua"
@@ -167,7 +167,7 @@ label pengangkatan:
     jump showKegiatan
 
 label studiMandiri:
-    scene classroom with dissolve
+    scene classroom with Dissolve(0.3)
     "Kamu diundang untuk melakukan studi mandiri dosenmu"
     "Dengan melakukan studi ini, diharapkan kamu dapat memahami materi yang sedang dipelajari semester ini"
     menu:
@@ -188,8 +188,8 @@ label studiMandiri:
     jump showKegiatan
 
 label penggunaNarkoba:
-    scene city with dissolve
-    show delinquent with dissolve
+    scene city with Dissolve(0.3)
+    show delinquent with Dissolve(0.3)
 
     bandar "Bro lu kenapa? lagi stress kah?"
     kamu "Iya bro. Banyak tugas nih"
@@ -217,8 +217,8 @@ label penggunaNarkoba:
     jump showKegiatan
 
 label jadiBandarNarkoba:
-    scene city with dissolve
-    show delinquent with dissolve
+    scene city with Dissolve(0.3)
+    show delinquent with Dissolve(0.3)
 
     bandar "Gimana barangnya, enak kan?"
     kamu "Wah enak bro"
@@ -244,12 +244,12 @@ label jadiBandarNarkoba:
     jump showKegiatan
 
 label bertemuPolisi:
-    scene bedroom with dissolve
+    scene bedroom with Dissolve(0.3)
     
     "Tok tok tok"
     "Kamu mendengar suara itu dan membuka pintu"
 
-    show detective with dissolve
+    show detective with Dissolve(0.3)
     agent "Selamat siang"
     kamu "Iya pak, ada apa ya?"
     agent "Kami melacak adanya penggunaan obat terlarang di daerah ini"
@@ -265,23 +265,23 @@ label bertemuPolisi:
             elif (pakaiNarkoba == 2):
                 jump penjara
         "Kabur":
-            hide detective with dissolve
+            hide detective with Dissolve(0.3)
             "Kamu memutuskan untuk melarikan diri"
             if (pakaiNarkoba == 1):
-                show city with dissolve
+                show city with Dissolve(0.3)
                 "Setelah berlari cukup jauh, kamu tidak melihat agen itu lagi"
                 $ stress += 10
                 jump showKegiatan
 
             elif (pakaiNarkoba == 2):
-                show detective with dissolve
+                show detective with Dissolve(0.3)
                 agent "Kamu tidak bisa lari. Kamu terindikasi sebagai asalah satu dari jaringan bandar narkoba"
                 agent "Bawa dia ke dalam mobil!"
                 "Kamu dibawa masuk ke mobil polisi"
                 jump penjara
 
 label daftarOrganisasi:
-    scene bedroom with dissolve
+    scene bedroom with Dissolve(0.3)
     
     hp "Mari bergabung bersama kami dalam Himpunan Mahasiswa Jurusan"
     hp "Bersama kami, mari majukan kehidupan mahasiswa intra kampus"
@@ -292,9 +292,9 @@ label daftarOrganisasi:
         "Setelah menerima pesan itu, Kamu memutuskan untuk:"
         "Ikut organisasi intra kampus":
             "Kamu berangkat ke kampus untuk kuliah dan mendaftar ke organisasi"
-            scene campus with dissolve
+            scene campus with Dissolve(0.3)
             "Setelah kuliah"
-            show senior with dissolve
+            show senior with Dissolve(0.3)
             senior "Halo, apakah kamu mau mendaftar ke organisasi ini?"
             kamu "Iya kak"
             senior "Oke, kalau begitu kita lakukan wawancara ya"
@@ -308,15 +308,15 @@ label daftarOrganisasi:
     jump showKegiatan
 
 label diterimaOrganisasi:
-    scene bedroom with dissolve
+    scene bedroom with Dissolve(0.3)
     $stressModifier += 2
     hp "Selamat, kamu telah diterima di himpunan mahasiswa jurusan"
     hp "Untuk itu, mari datang ke Welcome party yang akan dilakukan di kampus"
     menu:
         "Kamu menutup pesan itu dan memutuskan untuk"
         "Datang ke Welcome Party":
-            scene conference with dissolve
-            show senior with dissolve
+            scene conference with Dissolve(0.3)
+            show senior with Dissolve(0.3)
             $ levelRelasi += 2
 
             senior "Selamat datang di Himpunan Mahasiswa Jurusan"
@@ -338,7 +338,7 @@ label diterimaOrganisasi:
     jump showKegiatan
 
 label eventOrganisasi:
-    scene campus with dissolve
+    scene campus with Dissolve(0.3)
     "Kamu melihat ada brosur mengenai perekrutan panitia acara besar di jurusanmu"
     "Acara itu akan mengundang artis dari ibukota"
     "Tetapi, kamu melihat bahwa acara itu dilaksanakan dalam 3 minggu"
@@ -346,8 +346,8 @@ label eventOrganisasi:
         "Kamu memutuskan untuk"
 
         "Ikut kepanitiaan":
-            scene classroom with dissolve
-            show senior with dissolve
+            scene classroom with Dissolve(0.3)
+            show senior with Dissolve(0.3)
             senior "Selamat datang di kepanitiaan acara"
             senior "Mulai saat ini, mari kita membuat acara yang meriah"
             $ panitiaAcara = 1
@@ -356,23 +356,23 @@ label eventOrganisasi:
     jump showKegiatan
 
 label persiapanAcara:
-    scene classroom with dissolve
+    scene classroom with Dissolve(0.3)
     "Kamu bekerja sama dengan temanmu untuk mempersiapkan acara besar organisasi agar berjalan dengan baik"
     $ stress +=3
 
     jump showKegiatan
 
 label acaraBesar:
-    scene conference with dissolve
+    scene conference with Dissolve(0.3)
     "Setelah persiapan selama 3 bulan, acara yang kamu buat siap untuk dilaksanakan"
-    show senior with dissolve
+    show senior with Dissolve(0.3)
     senior "Dengan pembunyian gong ini, maka acara resmi dibuka"
-    hide senior with dissolve
+    hide senior with Dissolve(0.3)
     play sound "audio/gong.mp3"
     "Gong telah dibunyikan. para penampil sudah siap memasuki panggung"
     "Kamu melihat penampilan artis langsung dari belakang panggung"
     "Malam itu berjalan dengan sukses dan meriah"
-    scene classroom with dissolve
+    scene classroom with Dissolve(0.3)
     senior "Terima kasih bagi kalian yang sudah membantu untuk memeriahkan acara kita"
     senior "Semoga kepengurusan berikutnya bisa lebih meriah dari tahun ini"
     $ stress -= 30
@@ -381,7 +381,7 @@ label acaraBesar:
     jump showKegiatan
 
 label nontonAcaraBesar:
-    scene bedroom with dissolve
+    scene bedroom with Dissolve(0.3)
     "Kamu mendapat pengumuman tentang acara besar di jurusanmu yang mengundang artis ibukota favoritmu"
     menu:
         "Kamu memutuskan untuk..."
@@ -399,7 +399,7 @@ label nontonAcaraBesar:
     jump showKegiatan
 
 label pameranUsaha:
-    scene campus with dissolve
+    scene campus with Dissolve(0.3)
     "Kamu menerima pesan di HP-mu"
     hp "Selamat siang, saya mewakili sebuah organisasi kewirausahaan mengundang anda untuk mengikuti pameran usaha yang akan dilaksanakan minggu ini"
     hp "Acara ini dapat mengenalkan produk anda pada pasar yang anda inginkan dan akan mengembangkan usaha anda"
@@ -413,9 +413,9 @@ label pameranUsaha:
             $ levelUsahaTotal = levelUsaha + levelUsahaModifier
             hp "Baik. kami tunggu anda di hari pameran."
             hp "Terima kasih"
-            hide campus with dissolve
+            hide campus with Dissolve(0.3)
             "Di hari pameran"
-            scene exhibition with dissolve
+            scene exhibition with Dissolve(0.3)
             "Kamu membuka stand untuk menjual produkmu"
             $ money += (300 * levelUsahaTotal)
             if(isIntrovert):

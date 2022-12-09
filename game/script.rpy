@@ -128,6 +128,10 @@ label routinesMenu:
         jump pameranUsaha
     elif(turnsCounter == 92 and kaderisasi):
         jump pencalonanKetua
+    elif(turnsCounter ==95 and kaderisasi):
+        jump kampanyePemilu
+    elif(turnsCounter == 96 and panitiaAcara and kaderisasi):
+        jump pemiluJurusan
     
     jump showKegiatan
 

@@ -376,7 +376,11 @@ label acaraBesar:
     senior "Terima kasih bagi kalian yang sudah membantu untuk memeriahkan acara kita"
     senior "Semoga kepengurusan berikutnya bisa lebih meriah dari tahun ini"
     $ stress -= 30
-    $ levelRelasi += 3
+
+    if (kaderisasi):
+        $ levelRelasi += 5
+    else:
+        $ levelRelasi += 3
 
     jump showKegiatan
 
@@ -387,7 +391,7 @@ label nontonAcaraBesar:
         "Kamu memutuskan untuk..."
 
         "Beli tiket":
-            scene conference
+            scene conference with Dissolve(0.3)
             $ money -= 1500
             "Kamu membeli tiket untuk memasuki acara itu"
             "Setelah itu, kamu menonton acara itu sampai selesai"
@@ -429,6 +433,29 @@ label pameranUsaha:
     jump showKegiatan
 
 label pencalonanKetua:
+    scene campus with Dissolve(0.3)
+    hp "Telah dibuka pendaftaran calon ketua himpunan"
+    hp "Syarat utama dari menjadi ketua adalah bebas narkoba dan pernah menjadi pengurus di acara kampus"
+    hp "Bagi kalian yang ingin meneruskan perjuangan kami, silahkan mendaftar"
+
+    menu:
+        "Setelah menerima pesan itu, apa yang ingin kamu lakukan?"
+
+        "Mendaftar calon ketua":
+            scene classroom with Dissolve(0.3)
+            "Kamu menemui seniormu untuk melakukan tes"
+            senior "Nanti ditunggu ya hasil tesnya"
+        "Tidak mendaftar":
+            $ kaderisasi = 0
+            "Kamu memutuskan untuk tidak mendaftar menjadi calon ketua"
+
+    jump showKegiatan
+
+label kampanyePemilu:
+
+    jump showKegiatan
+
+label pemiluJurusan:
 
     jump showKegiatan
 

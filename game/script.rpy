@@ -24,7 +24,7 @@ label start:
     $ nilaiSKS = 0
     $ saving = 0
     $ saldo = 0
-    $ salary = 100
+    $ salary = 200
     $ stressModifier = 0
     $ usahaStressModifier = 0
     $ nilaiModifier = 0

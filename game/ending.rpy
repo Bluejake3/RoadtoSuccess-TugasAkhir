@@ -1,13 +1,33 @@
 label cumLaude:
+    scene conference with dissolve
+    hide screen info_Updatehid
 
+    "Kamu telah menyelesaikan studimu di kampus ini"
+    "Dosen mengumumkan namamu dengan keterangan lulus cumlaude"
+    "Kamu menjadi salah satu mahasiswa yang dipandang tinggi oleh para tamu wisuda"
+
+    "Ending 1 - 'Lulus dengan sempurna' tercapai"
     return 
 
 label lulus:
+    scene conference with dissolve
+    hide screen info_Update
 
+    "Kamu telah menyelesaikan studimu di kampus ini"
+    "Dosen mengumumkan namamu dengan keterangan lulus"
+    "Kamu lega bahwa studimu telah selesai dan berharap agar ilmu yang kamu dapatkan bermanfaat"
+
+    "Ending 2 - 'Lulus Kuliah' tercapai"
     return
 
 label lanjutKuliah:
+    scene conference with dissolve
+    hide screen info_Update
 
+    "Kamu telah menyelesaikan studimu di kampus ini"
+    "Karena kamu telah mendapatkan beasiswa, kamu tidak terlalu memedulikan nilai yang kamu dapatkan"
+    "Setelah pengukuhan selesai, kamu langsung mempersiapkan diri untuk mengikuti kuliah di jenjang yang lebih tinggi"
+    "Ending 3 - 'Lanjut kuliah' tercapai"
     return
 
 label gagal:

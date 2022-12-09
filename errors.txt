@@ -2,11 +2,9 @@
 errors listed below, and try again.
 
 
-The label take_savings is defined twice, at File "game/events.rpy", line 1:
-label take_savings:
-and File "game/events.rpy", line 8:
-label take_savings:
-
+File "game/events.rpy", line 292: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
+    "Setelah menerima pesan itu, Kamu memutuskan untuk:"
+                                                        ^
 
 Ren'Py Version: Ren'Py 7.4.11.2266
-Mon Dec  5 14:59:38 2022
+Fri Dec  9 10:20:49 2022

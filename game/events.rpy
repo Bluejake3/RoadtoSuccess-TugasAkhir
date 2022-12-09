@@ -289,22 +289,21 @@ label daftarOrganisasi:
     hp "Untuk pendaftaran dan wawancara dapat dilakukan di selasar gedung jurusan"
     
     menu:
-        "Setelah menerima pesan itu, Kamu memutuskan untuk:":
+        "Setelah menerima pesan itu, Kamu memutuskan untuk:"
+        "Ikut organisasi intra kampus":
+            "Kamu berangkat ke kampus untuk kuliah dan mendaftar ke organisasi"
+            scene campus with dissolve
+            "Setelah kuliah"
+            show senior with dissolve
+            senior "Halo, apakah kamu mau mendaftar ke organisasi ini?"
+            kamu "Iya kak"
+            senior "Oke, kalau begitu kita lakukan wawancara ya"
+            kamu "Baik kak"
+            "Kamu melakukan wawancara untuk mendaftar organisasi"
+            $ masukOrganisasi = 1
 
-            "Ikut organisasi intra kampus":
-                "Kamu berangkat ke kampus untuk kuliah dan mendaftar ke organisasi"
-                scene campus with dissolve
-                "Setelah kuliah"
-                show senior with dissolve
-                senior "Halo, apakah kamu mau mendaftar ke organisasi ini?"
-                kamu "Iya kak"
-                senior "Oke, kalau begitu kita lakukan wawancara ya"
-                kamu "Baik kak"
-                "Kamu melakukan wawancara untuk mendaftar organisasi"
-                $ masukOrganisasi = 1
-
-            "Tidak ikut organisasi":
-                "Kamu menutup pesan itu dan berangkat ke kampus untuk kuliah"
+        "Tidak ikut organisasi":
+            "Kamu menutup pesan itu dan berangkat ke kampus untuk kuliah"
 
     jump showKegiatan
 
@@ -314,28 +313,27 @@ label diterimaOrganisasi:
     hp "Selamat, kamu telah diterima di himpunan mahasiswa jurusan"
     hp "Untuk itu, mari datang ke Welcome party yang akan dilakukan di kampus"
     menu:
-        "Kamu menutup pesan itu dan memutuskan untuk":
+        "Kamu menutup pesan itu dan memutuskan untuk"
+        "Datang ke Welcome Party":
+            scene conference with dissolve
+            show senior with dissolve
+            $ levelRelasi += 2
 
-            "Datang ke Welcome Party":
-                scene conference with dissolve
-                show senior with dissolve
-                $ levelRelasi += 2
+            senior "Selamat datang di Himpunan Mahasiswa Jurusan"
+            senior "Tenang saja, kami disini akan menjadi teman kalian untuk menyejahterakan kehidupan mahasiswa di dalam kampus"
+            senior "Mari bekerja sama untuk mencapai tujuan kita"
 
-                senior "Selamat datang di Himpunan Mahasiswa Jurusan"
-                senior "Tenang saja, kami disini akan menjadi teman kalian untuk menyejahterakan kehidupan mahasiswa di dalam kampus"
-                senior "Mari bekerja sama untuk mencapai tujuan kita"
-
-                if (isIntrovert):
-                    $ stress -= 15
-                else:
-                    $stress -= 20
-                "Kamu menikmati malam itu untuk berkenalan dengan rekan-rekan di himpunan"
-            "Lewati Welcome Party":
-                if (isIntrovert):
-                    $ stress -= 15
-                else:
-                    $stress -= 10
-                "Kamu melanjutkan aktivitas seperti biasa"
+            if (isIntrovert):
+                $ stress -= 15
+            else:
+                $stress -= 20
+            "Kamu menikmati malam itu untuk berkenalan dengan rekan-rekan di himpunan"
+        "Lewati Welcome Party":
+            if (isIntrovert):
+                $ stress -= 15
+            else:
+                $stress -= 10
+            "Kamu melanjutkan aktivitas seperti biasa"
 
     jump showKegiatan
 
@@ -403,7 +401,7 @@ label nontonAcaraBesar:
 label pameranUsaha:
     scene campus with dissolve
     "Kamu menerima pesan di HP-mu"
-    hp "Selamat siang, saya mewakili sebuah organisasi kewirausahaan mengundang anda untuk mengikuti pameran usaha yang akan dilaksanakan minggu ini"\
+    hp "Selamat siang, saya mewakili sebuah organisasi kewirausahaan mengundang anda untuk mengikuti pameran usaha yang akan dilaksanakan minggu ini"
     hp "Acara ini dapat mengenalkan produk anda pada pasar yang anda inginkan dan akan mengembangkan usaha anda"
     hp "Ada biaya pendaftaran sejumlah 1000 unntuk membuka stand di pameran ini"
     menu:
@@ -415,7 +413,7 @@ label pameranUsaha:
             $ levelUsahaTotal = levelUsaha + levelUsahaModifier
             hp "Baik. kami tunggu anda di hari pameran."
             hp "Terima kasih"
-            hide scene campus with dissolve
+            hide campus with dissolve
             "Di hari pameran"
             scene exhibition with dissolve
             "Kamu membuka stand untuk menjual produkmu"

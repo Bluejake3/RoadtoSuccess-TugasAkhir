@@ -25,7 +25,7 @@ screen map:
             action ui.callsinnewcontext("infoLengkapLabel")
 
 label showKegiatan:
-    scene bedroom with dissolve
+    scene map with dissolve
     call screen map with dissolve
 
     if _return == "bekerja":

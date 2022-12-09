@@ -89,6 +89,8 @@ label routinesMenu:
     $ money += (salary + profit)
     $ saldo += math.floor(saldo * 0.001)
 
+    scene bedroom with dissolve
+
     if (not (turnsCounter % 17)):
         jump evaluasi
     elif (turnsCounter == 14):

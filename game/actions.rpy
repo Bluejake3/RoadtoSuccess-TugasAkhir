@@ -69,6 +69,7 @@ label menabung:
             if (saving>saldo):
                 teller "Mohon maaf, saldo anda kurang"
             else:
+                play sound "audio/kaching.mp3"
                 $ saldo -= saving
                 $ money += saving
                 teller "Penarikan sejumlah [saving] berhasil. Saldomu sekarang [saldo]"
@@ -79,6 +80,7 @@ label menabung:
             if (saving>money):
                 teller "Mohon maaf, uang anda kurang"
             else:
+                play sound "audio/kaching.mp3"
                 $ saldo += saving
                 $ money -= saving
                 teller "Setoran sejumlah [saving] berhasil"

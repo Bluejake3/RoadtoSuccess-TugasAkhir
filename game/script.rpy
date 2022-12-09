@@ -39,6 +39,9 @@ label start:
     $ kaderisasi = 0
     $ mingguKader = [22, 26, 30, 35, 39, 43, 47]
     $ masukOrganisasi = 0
+    $ panitiaAcara = 0
+    $ persiapanAcaraOrganisasi = [78, 80, 82, 84, 86]
+    $ levelRelasi = 0
     scene city with fade
     play music "audio/song1.mp3"
 
@@ -110,8 +113,19 @@ label routinesMenu:
         jump studiMandiri
     elif(turnsCounter == 73 and masukOrganisasi):
         jump diterimaOrganisasi
-    elif (turnsCounter == 76 and pakaiNarkoba):
-        jump overdosis
+    elif (turnsCounter == 76):
+        if(pakaiNarkoba):
+            jump overdosis
+        else:
+            jump acaraOrganisasi
+    elif((turnsCounter in persiapanAcaraOrganisasi) and panitiaAcara):
+        jump persiapanAcara
+    elif(turnsCounter == 88):
+        if (panitiaAcara):
+            jump acaraBesar
+        else:
+            jump nontonAcaraBesar
+    
     
     
     jump showKegiatan

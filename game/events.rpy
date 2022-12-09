@@ -319,6 +319,7 @@ label diterimaOrganisasi:
             "Datang ke Welcome Party":
                 scene conference with dissolve
                 show senior with dissolve
+                $ levelRelasi += 2
 
                 senior "Selamat datang di Himpunan Mahasiswa Jurusan"
                 senior "Tenang saja, kami disini akan menjadi teman kalian untuk menyejahterakan kehidupan mahasiswa di dalam kampus"
@@ -338,7 +339,66 @@ label diterimaOrganisasi:
 
     jump showKegiatan
 
+label eventOrganisasi:
+    scene campus with dissolve
+    "Kamu melihat ada brosur mengenai perekrutan panitia acara besar di jurusanmu"
+    "Acara itu akan mengundang artis dari ibukota"
+    "Tetapi, kamu melihat bahwa acara itu dilaksanakan dalam 3 minggu"
+    menu:
+        "Kamu memutuskan untuk"
 
+        "Ikut kepanitiaan":
+            scene classroom with dissolve
+            show senior with dissolve
+            senior "Selamat datang di kepanitiaan acara"
+            senior "Mulai saat ini, mari kita membuat acara yang meriah"
+            $ panitiaAcara = 1
+        "Tidak ikut kepanitiaan":
+            "Kamu memutuskan untuk tidak menjadi panitia"
+    jump showKegiatan
+
+label persiapanAcara:
+    scene classroom with dissolve
+    "Kamu bekerja sama dengan temanmu untuk mempersiapkan acara besar organisasi agar berjalan dengan baik"
+    $ stress +=3
+
+    jump showKegiatan
+
+label acaraBesar:
+    scene conference with dissolve
+    "Setelah persiapan selama 3 bulan, acara yang kamu buat siap untuk dilaksanakan"
+    show senior with dissolve
+    senior "Dengan pembunyian gong ini, maka acara resmi dibuka"
+    hide senior with dissolve
+    play sound "audio/gong.mp3"
+    "Gong telah dibunyikan. para penampil sudah siap memasuki panggung"
+    "Kamu melihat penampilan artis langsung dari belakang panggung"
+    "Malam itu berjalan dengan sukses dan meriah"
+    scene classroom with dissolve
+    senior "Terima kasih bagi kalian yang sudah membantu untuk memeriahkan acara kita"
+    senior "Semoga kepengurusan berikutnya bisa lebih meriah dari tahun ini"
+    $ stress -= 30
+    $ levelRelasi += 3
+
+    jump showKegiatan
+
+label nontonAcaraBesar:
+    scene bedroom with dissolve
+    "Kamu mendapat pengumuman tentang acara besar di jurusanmu yang mengundang artis ibukota favoritmu"
+    menu:
+        "Kamu memutuskan untuk..."
+
+        "Beli tiket":
+            scene conference
+            $ money -= 1500
+            "Kamu membeli tiket untuk memasuki acara itu"
+            "Setelah itu, kamu menonton acara itu sampai selesai"
+            "Acara itu berlangsung sangat meriah"
+            if (isIntrovert):
+                $ stress -= 10
+            else:
+                $ stress -= 15
+    jump showKegiatan
 
 
     

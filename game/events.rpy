@@ -413,9 +413,8 @@ label pameranUsaha:
             $ levelUsahaTotal = levelUsaha + levelUsahaModifier
             hp "Baik. kami tunggu anda di hari pameran."
             hp "Terima kasih"
-            hide campus with Dissolve(0.3)
-            "Di hari pameran"
             scene exhibition with Dissolve(0.3)
+            "Di hari pameran"
             "Kamu membuka stand untuk menjual produkmu"
             $ money += (300 * levelUsahaTotal)
             if(isIntrovert):

@@ -11,8 +11,7 @@ return
 
 label infoLengkapLabel:
     show screen infoUpdate
-    call screen infoLengkapScreen with dissolve
-    return
+    call screen infoLengkapScreen with Dissolve(0.3)
 
 screen infoLengkapScreen:
     add "status_background"

@@ -126,6 +126,8 @@ label routinesMenu:
             jump nontonAcaraBesar
     elif(turnsCounter == 88 and capital):
         jump pameranUsaha
+    elif(turnsCounter == 92 and kaderisasi):
+        jump pencalonanKetua
     
     jump showKegiatan
 

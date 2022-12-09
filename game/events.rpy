@@ -422,13 +422,15 @@ label pameranUsaha:
                 $ stress += 10
             else:
                 $ stress += 8
-            "Kamu mendapatkan keuntungan dan pengalaman dari pameran ini"
+            $ levelRelasi += (levelUsahaTotal // 2)
+            "Kamu mendapatkan keuntungan, pengalaman, dan relasi dari pameran ini"
         "Tidak Bersedia":
             hp "Baik, mohon maaf sudah mengganggu."
 
     jump showKegiatan
 
-    
+label pencalonanKetua:
 
+    jump showKegiatan
 
     

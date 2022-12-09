@@ -1,22 +1,22 @@
 label bekerja:
     show screen infoUpdate
-    scene bedroom with dissolve
+    scene bedroom with Dissolve(0.3)
     menu:
         "Apa yang akan kamu kerjakan pada minggu ini?"
         "Jasa joki game online":
-            scene cafe with dissolve
+            scene cafe with Dissolve(0.3)
             $ stress += (1 + usahaStressModifier)
             $ money += 100
             "Kamu membuka jasa joki game online untuk seminggu"
 
         "Jual makanan ringan":
-            scene city with dissolve
+            scene city with Dissolve(0.3)
             $ stress += (4 + usahaStressModifier)
             $ money += 300
             "Kamu berjualan makanan ringan selama seminggu"
 
         "Ambil proyek" if turnsCounter >=18:
-            scene office with dissolve
+            scene office with Dissolve(0.3)
             $ stress += (9 + usahaStressModifier)
             $ money += 500
             "Kamu mengambil sebuah proyek yang kamu selesaikan dalam seminggu"
@@ -27,7 +27,7 @@ label bekerja:
     jump endCheck
 
 label rekreasi:
-    scene bedroom with dissolve
+    scene bedroom with Dissolve(0.3)
     show screen infoUpdate
 
     menu:
@@ -40,7 +40,7 @@ label rekreasi:
             $ money -= 50
             "Kamu bermain sendiri di kos"
         "Nongkrong bersama teman-teman":
-            scene cafe with dissolve
+            scene cafe with Dissolve(0.3)
             if(isIntrovert):
                 $ stress -=15
             else:
@@ -48,7 +48,7 @@ label rekreasi:
             $ money -= 100
             "Kamu bercengkrama dengan temanmu dan membeli beberapa kopi"
         "Pergi ke Mall" if turnsCounter >= 34:
-            scene mall with dissolve
+            scene mall with Dissolve(0.3)
             $ stress -= 40
             $ money -= 400
             "Kamu pergi ke mall untuk melepas penat"
@@ -58,7 +58,7 @@ label rekreasi:
 
 label menabung:
     show screen infoUpdate
-    scene bank with dissolve
+    scene bank with Dissolve(0.3)
    
     menu:
         teller "Selamat datang di bank, ada yang bisa kami bantu"
@@ -91,7 +91,7 @@ label menabung:
 
 label usaha:
     show screen infoUpdate
-    scene office with dissolve
+    scene office with Dissolve(0.3)
     python:    
         capital = int(renpy.input("Kamu mau mengembangkan usaha dengan modal berapa?", length=10))
 
@@ -113,7 +113,7 @@ label usaha:
 
 label belajar:
     show screen infoUpdate
-    scene bedroom with dissolve
+    scene bedroom with Dissolve(0.3)
     menu:
         "Kamu mau belajar seperti apa?"
         "Belajar sendiri":

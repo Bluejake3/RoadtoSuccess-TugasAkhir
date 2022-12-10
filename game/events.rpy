@@ -451,12 +451,66 @@ label pencalonanKetua:
 
     jump showKegiatan
 
-label kampanyePemilu:
+label pengumumanCalon:
+    scene campus with Dissolve(0.3)
+    show senior with Dissolve(0.3)
+
+    senior "Setelah melalui tahap seleksi, tersisalah beberapa kandidat yang memenuhi semua persyaratan yang kami ajukan"
+    senior "Pada hari ini, kami akan mengumumkan siapa calon ketua himpunan periode berikutnya"
+    "Kamu menyimak siapa saja yang berhasil menjadi ketua"
+    "Selamat kepada Yusuf Fabriansyah sebagai calon ketua himpunan"
+
+    if (panitiaAcara):
+        senior "Selamat kepada [nama] sebagai calon ketua himpunan"
+        senior "Apakah ada sepatah kata dari para calon untuk para hadirin?"
+        "Kamu memberikan kata-kata sambutan sebagai calon ketua himpunan yang baru"
+    else:
+        $ kaderisasi = 0
+        "Namamu tidak disebutkan oleh pengawas pemilu"
+        "Kamu gagal menjadi calon ketua himpunan periode berikutnya"
 
     jump showKegiatan
 
-label pemiluJurusan:
+label kampanyePemilu:
+    show campus with Dissolve(0.3)
 
+    menu:
+        "Apakah kamu akan melakukan kampanye sebagai calon ketua himpunan minggu ini?"
+        "Ya":
+            $ levelRelasi += 1
+            $ stress += 2
+            "Kamu melakukan kampanye agar kamu dapat terpilih menjadi ketua himpunan"
+        "Tidak":
+            "Kamu tidak melakukan kampanya pada minggu ini"
+    jump showKegiatan
+
+label pemiluJurusan:
+    show campus with Dissolve(0.3)
+
+    "Setelah melalui minggu kampanye, tibalah hari pemilu"
+    "Kamu melihat para mahasiswa mengisi balot pemilihan umum"
+    "Setelah waktu pemungutan selesai, kamu mengikuti perhitungan suara"
+
+    show classroom with Dissolve(0.3)
+
+    if (levelRelasi >= 8):
+        $stressModifier += 2
+        $ levelRelasi += 4
+        senior "Pemenang pemilu kali ini adalah [nama]"
+        senior "Kepada saudara [nama], apakah ada sambutan sebagai ketua terpilih?"
+        "Kamu memberikan ungkapan terima kasih dan keinginan untuk bekerja sama sebagai ketua organisasi"
+    else:
+        $stressModifier -= 2
+        $ kaderisasi = 0
+        senior "Pemenang pemilu kali ini adalah Yusuf Fabriansyah"
+        "Kamu gagal memenangi pemilu himpunan"
+        senior "Bagi saudara [nama], terima kasih atas semangat dan partisipasinya dalam pemilu kali ini"
+        "Kamu meninggalkan ruangan perhitungan suara"
+
+    jump showKegiatan
+
+label berhentiKuliah:
+    scene bedroom with Dissolve(0.3)
     jump showKegiatan
 
     

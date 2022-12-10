@@ -41,6 +41,7 @@ label start:
     $ masukOrganisasi = 0
     $ panitiaAcara = 0
     $ persiapanAcaraOrganisasi = [72, 74, 76, 78, 80]
+    $ mingguKampanye = [96, 97]
     $ levelRelasi = 0
     scene city with fade
     play music "audio/song1.mp3"
@@ -95,7 +96,7 @@ label routinesMenu:
         jump pelatihanKewirausahaan
     elif (turnsCounter == 18):
         jump pembukaanKader
-    elif (kaderisasi >= 1 and (turnsCounter in mingguKader)):
+    elif (kaderisasi and (turnsCounter in mingguKader)):
         jump kader
     elif (turnsCounter == 35):
         jump unlockKeMall
@@ -103,7 +104,7 @@ label routinesMenu:
         jump penggunaNarkoba
     elif (turnsCounter == 45 and pakaiNarkoba):
         jump jadiBandarNarkoba
-    elif (turnsCounter == 52 and kaderisasi >= 1):
+    elif (turnsCounter == 52 and kaderisasi):
         jump pengangkatan
     elif (turnsCounter == 54 and kaderisasi):
         jump daftarOrganisasi
@@ -129,9 +130,13 @@ label routinesMenu:
     elif(turnsCounter == 92 and kaderisasi):
         jump pencalonanKetua
     elif(turnsCounter ==95 and kaderisasi):
+        jump pengumumanCalon
+    elif(turnsCounter in mingguKampanye and kaderisasi):
         jump kampanyePemilu
-    elif(turnsCounter == 96 and panitiaAcara and kaderisasi):
+    elif(turnsCounter == 98 and panitiaAcara and kaderisasi):
         jump pemiluJurusan
+    elif (turnsCounter == 103 and levelUsaha >= 10)
+        jump berhentiKuliah
     
     jump showKegiatan
 

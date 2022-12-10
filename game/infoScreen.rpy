@@ -28,7 +28,7 @@ screen infoLengkapScreen:
         imagebutton:
             idle "gui/backButton.png"
             hover "gui/backButton_hover.png"
-            action ui.callsinnewcontext("showKegiatan")
+            action ui.jumps("showKegiatan")
 
     text "Level Usaha: [levelUsahaTotal] ([levelUsahaEXP]%)" xpos 0.1 ypos 0.2
     text "Total Modal Usaha: [totalCapital]" xpos 0.1 ypos 0.25

@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/events.rpy", line 292: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
-    "Setelah menerima pesan itu, Kamu memutuskan untuk:"
-                                                        ^
+File "game/events.rpy", line 511: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
+    "Melanjutkan kuliah"
+                        ^
 
 Ren'Py Version: Ren'Py 7.4.11.2266
-Fri Dec  9 10:20:49 2022
+Sat Dec 10 17:05:46 2022

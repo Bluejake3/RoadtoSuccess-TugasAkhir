@@ -22,7 +22,7 @@ screen map:
         imagebutton:
             idle "gui/infoButton.png"
             hover "gui/infoButton_hover.png"
-            action ui.callsinnewcontext("infoLengkapLabel")
+            action ui.jumps("infoLengkapLabel")
 
 label showKegiatan:
     scene maps with Dissolve(0.1)

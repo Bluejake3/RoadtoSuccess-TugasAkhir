@@ -3,8 +3,14 @@ label cumLaude:
     hide screen info_Updatehid
 
     "Kamu telah menyelesaikan studimu di kampus ini"
-    "Dosen mengumumkan namamu dengan keterangan lulus cumlaude"
-    "Kamu menjadi salah satu mahasiswa yang dipandang tinggi oleh para tamu wisuda"
+    "Kamu menunggu namamu dipanggil ke atas panggung"
+    announcer "[nama], Lulus dengan status cum laude"
+    "Kamu naik ke atas panggung"
+    show professor with Dissolve(0.3)
+    rektor "Selamat ya mas"
+    kamu "Terima kasih pak"
+    hide professor with Dissolve(0.3)
+    "Kamu lega bahwa studimu telah selesai dan berharap agar ilmu yang kamu dapatkan bermanfaat"
 
     "Ending 1 - 'Lulus dengan sempurna' tercapai"
     return 
@@ -14,7 +20,12 @@ label lulus:
     hide screen info_Update
 
     "Kamu telah menyelesaikan studimu di kampus ini"
-    "Dosen mengumumkan namamu dengan keterangan lulus"
+    announcer "[nama], Lulus"
+    "Kamu naik ke atas panggung"
+    show professor with Dissolve(0.3)
+    rektor "Selamat ya mas"
+    kamu "Terima kasih pak"
+    hide professor with Dissolve(0.3)
     "Kamu lega bahwa studimu telah selesai dan berharap agar ilmu yang kamu dapatkan bermanfaat"
 
     "Ending 2 - 'Lulus Kuliah' tercapai"
@@ -97,5 +108,16 @@ label overdosis:
     "Tetapi sayang nyawamu tidak dapat terselamatkan"
 
     "Ending 9 - 'Overdosis Narkoba' tercapai"
+
+    return
+
+label mencobaHalBaru:
+    scene franchise with Dissolve(0.3)
+    hide screen info_Update
+
+    "Kamu memutuskan untuk berhenti kuliah"
+    "Setelah berhenti kuliah, kamu menggunakan waktumu untuk mencari tahu tentang dunia bisnis"
+    "Kamu mempelajari hal baru yang tidak diajarkan selama kamu bekuliah dan mempraktekannya di dunia bisnis"
+    "Ending 10 - 'Pengusaha Otodidak' tercapai"
 
     return

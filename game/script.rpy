@@ -10,6 +10,8 @@ define teller = Character("Teller Bank")
 define bandar = Character("Bandar Narkoba")
 define agent = Character("Agen Anti-narkotika")
 define hp = Character("Pesan di HP")
+define announcer = Character("Pembawa Acara")
+define rektor = Character("Rektor")
 
 # The game starts here.
 
@@ -24,7 +26,7 @@ label start:
     $ nilaiSKS = 0
     $ saving = 0
     $ saldo = 0
-    $ salary = 200
+    $ salary = 100
     $ stressModifier = 0
     $ usahaStressModifier = 0
     $ nilaiModifier = 0
@@ -43,6 +45,7 @@ label start:
     $ persiapanAcaraOrganisasi = [72, 74, 76, 78, 80]
     $ mingguKampanye = [96, 97]
     $ levelRelasi = 0
+    $ getScholarship = 0
     scene city with fade
     play music "audio/song1.mp3"
 
@@ -135,8 +138,10 @@ label routinesMenu:
         jump kampanyePemilu
     elif(turnsCounter == 98 and panitiaAcara and kaderisasi):
         jump pemiluJurusan
-    elif (turnsCounter == 103 and levelUsaha >= 10)
+    elif (turnsCounter == 103 and levelUsaha >= 10):
         jump berhentiKuliah
+    elif(turnsCounter == 105):
+        jump cariBeasiswa
     
     jump showKegiatan
 

@@ -13,21 +13,18 @@ label takeCapitals:
     return
 
 label evaluasi:
+    scene bedroom with Dissolve(0.3)
     if (nilaiSemester >= 86):
         $ nilaiSKS += SKSAmbil
         $ SKSAmbil += 4
-        $ stressModifier += 2
         if (SKSAmbil + 4 > 24):
             $ SKSAmbil = 24
-            $ stressModifier -= 2
         "Kamu mendapat nilai A. Di semester berikutnya, SKSmu akan bertambah 4"
     elif(nilaiSemester >= 76):
         $ nilaiSKS += math.ceil(SKSAmbil * (3.5/4))
         $ SKSAmbil += 2
-        $ stressModifier += 1
         if (SKSAmbil > 24):
             $ SKSAmbil = 24
-            $ stressModifier -= 1
         "Kamu mendapat nilai AB. Di semester berikutnya, SKSmu akan bertambah 2"
     elif(nilaiSemester >= 66):
         $ nilaiSKS += math.ceil(SKSAmbil * (3/4))
@@ -37,40 +34,33 @@ label evaluasi:
     elif(nilaiSemester >= 61):
         $ nilaiSKS += math.ceil(SKSAmbil * (2.5/4))
         $ SKSAmbil -= 2
-        $ stressModifier -= 1
-        if (SKSAmbil < 18):
-            $ SKSAmbil = 18
-            $ stressModifier += 1
+        if (SKSAmbil < 14):
+            $ SKSAmbil = 14
         $ isEverGotCBelow =1
         "Kamu mendapat nilai BC. Di semester berikutnya, SKSmu akan berkurang 2"
     elif(nilaiSemester >= 56):
         $ nilaiSKS += math.ceil(SKSAmbil * (2/4))
         $ SKSAmbil -= 4
-        $ stressModifier -= 2
-        if (SKSAmbil < 18):
-            $ SKSAmbil = 18
-            $ stressModifier += 2
+        if (SKSAmbil < 14):
+            $ SKSAmbil = 14
         $ isEverGotCBelow =1
         "Kamu mendapat nilai C. Di semester berikutnya, SKSmu akan berkurang 4"
     elif(nilaiSemester >= 41):
         $ nilaiSKS += math.ceil(SKSAmbil * (1/4))
         $ SKSAmbil -= 6
-        $ stressModifier -= 3
-        if (SKSAmbil < 18):
-            $ SKSAmbil = 18
-            $ stressModifier += 3
+        if (SKSAmbil < 14):
+            $ SKSAmbil = 14
         $ isEverGotCBelow =1
         "Kamu mendapat nilai D. Di semester berikutnya, SKSmu akan berkurang 6"
     else:
         $ SKSAmbil -= 6
-        $ stressModifier -= 3
-        if (SKSAmbil < 18):
-            $ SKSAmbil = 18
-            $ stressModifier += 3
+        if (SKSAmbil < 14):
+            $ SKSAmbil = 14
         
         $ isEverGotCBelow =1
         "Kamu mendapat nilai E. Di semester berikutnya, SKSmu akan berkurang 6"
 
+    $ stressModifier = (SKSAmbil - 18)/2
     $ nilaiSemester = 0
     $ stress = 0
     jump endCheck
@@ -238,7 +228,7 @@ label jadiBandarNarkoba:
             bandar "Yasudah bro, padahal pasarnya luas loh."
         
     kamu "Aku beli barang biasanya ya bro"
-    $ money -= 1000
+    $ money -= 10000
     bandar "Siap bro"
 
     jump showKegiatan
@@ -407,12 +397,12 @@ label pameranUsaha:
     "Kamu menerima pesan di HP-mu"
     hp "Selamat siang, saya mewakili sebuah organisasi kewirausahaan mengundang anda untuk mengikuti pameran usaha yang akan dilaksanakan minggu ini"
     hp "Acara ini dapat mengenalkan produk anda pada pasar yang anda inginkan dan akan mengembangkan usaha anda"
-    hp "Ada biaya pendaftaran sejumlah 1000 unntuk membuka stand di pameran ini"
+    hp "Ada biaya pendaftaran sejumlah 10000 unntuk membuka stand di pameran ini"
     menu:
         hp "Apakah anda bersedia untuk mengikuti pameran kewirausahaan yang akan di"
 
         "Bersedia":
-            $ money -= 1000
+            $ money -= 10000
             $ levelUsahaModifier += 3
             $ levelUsahaTotal = levelUsaha + levelUsahaModifier
             hp "Baik. kami tunggu anda di hari pameran."
@@ -511,6 +501,20 @@ label pemiluJurusan:
 
 label berhentiKuliah:
     scene bedroom with Dissolve(0.3)
+    "Suatu hari kamu berpikir untuk berhenti kuliah"
+    "Kamu beranggapan bahwa usahamu sudah cukup besar dan memakan banyak konsentrasimu"
+    "Kamu merasa bahwa kuliah yang akan kamu lakukan tidak berguna"
+    menu:
+        "Setelah berpikir panjang, kamu memutuskan untuk"
+
+        "Berhenti kuliah":
+            jump mencobaHalBaru
+        "Melanjutkan kuliah":
+            "Kamu mengurungkan niatmu untuk berhenti kuliah"
     jump showKegiatan
 
+label cariBeasiswa:
+    scene campus with Dissolve(0.3)
+
+    jump showKegiatan
     

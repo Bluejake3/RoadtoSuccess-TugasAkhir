@@ -18,7 +18,7 @@ label bekerja:
         "Ambil proyek" if turnsCounter >=18:
             scene office with Dissolve(0.3)
             $ stress += (9 + usahaStressModifier)
-            $ money += 500
+            $ money += 750
             "Kamu mengambil sebuah proyek yang kamu selesaikan dalam seminggu"
 
         "Kembali":
@@ -101,7 +101,7 @@ label usaha:
         $ levelUsaha = totalCapital // 1000
         $ levelUsahaEXP = (totalCapital % 1000) / 10   
         $ levelUsahaTotal = levelUsahaModifier + levelUsaha
-        $ profit = (totalCapital / 10) + (totalCapital/50 * (levelUsahaTotal - 1))
+        $ profit = (totalCapital / 10) + (totalCapital/200 * (levelUsahaTotal - 1))
         $ usahaStressModifier = totalCapital // 2500
         
         "Kamu memasukkan modal sejumlah [capital], jumlah keuntunganmu setiap minggu akan bertambah menjadi [profit]"

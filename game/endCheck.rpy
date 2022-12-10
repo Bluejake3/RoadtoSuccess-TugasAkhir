@@ -10,9 +10,9 @@ label endCheck:
     elif (stress >= 100):
         jump gila 
     elif (nilaiSKS >= 144):
-        if (turnsCounter >= 119 and turnsCounter <= 136 and getScholarship):
+        if(turnsCounter <= 136 and getScholarship):
             jump lanjutKuliah
-        elif (turnsCounter <= 136 and !isEverGotCBelow):
+        elif (turnsCounter <= 136 and (not isEverGotCBelow)):
             jump cumLaude
         else:
             jump Lulus

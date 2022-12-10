@@ -19,6 +19,7 @@ label start:
     $ SKSAmbil = 18
     $ profitMultiplier = 0
     $ isIntrovert = 0
+    $ isEverGotCBelow = 0
     $ turnsCounter = 0
     $ stress = 0
     $ money = 300
@@ -143,6 +144,8 @@ label routinesMenu:
         jump berhentiKuliah
     elif(turnsCounter == 105):
         jump cariBeasiswa
+    elif (turnsCounter == 107 and getScholarship):
+        jump pengumumanBeasiswa
     
     jump showKegiatan
 

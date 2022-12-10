@@ -363,9 +363,10 @@ label acaraBesar:
     "Kamu melihat penampilan artis langsung dari belakang panggung"
     "Malam itu berjalan dengan sukses dan meriah"
     scene classroom with Dissolve(0.3)
+    show senior with Dissolve(0.3)
     senior "Terima kasih bagi kalian yang sudah membantu untuk memeriahkan acara kita"
     senior "Semoga kepengurusan berikutnya bisa lebih meriah dari tahun ini"
-    $ stress -= 30
+    $ stress -= 50
 
     if (kaderisasi):
         $ levelRelasi += 5
@@ -436,6 +437,7 @@ label pencalonanKetua:
         "Mendaftar calon ketua":
             scene classroom with Dissolve(0.3)
             "Kamu menemui seniormu untuk melakukan tes"
+            show senior with Dissolve(0.3)
             senior "Nanti ditunggu ya hasil tesnya"
         "Tidak mendaftar":
             $ kaderisasi = 0
@@ -484,6 +486,7 @@ label pemiluJurusan:
     "Setelah waktu pemungutan selesai, kamu mengikuti perhitungan suara"
 
     show classroom with Dissolve(0.3)
+    show senior with Dissolve(0.3)
 
     if (levelRelasi >= 8):
         $stressModifier += 2
@@ -516,7 +519,29 @@ label berhentiKuliah:
     jump showKegiatan
 
 label cariBeasiswa:
-    scene campus with Dissolve(0.3)
+    scene campus with Dissolve(0.3)\
+    "Kamu melihat poster pendaftaran beasiswa di mading kampus"
+    "Beasiswa ini akan memberimu peluang untuk melanjutkan kuliah di luar negeri"
+    "Syarat utama untuk mendapatkan beasiswa adalah memiliki nilai bagus dalam 6 semester yang sudah ditempuh"
+    menu:
+        "Setelah melihat poster itu, kamu memutuskan untuk..."
+        "Daftar Beasiswa":
+            $ getScholarship = 1
+            "Kamu memututuskan untuk mendaftar beasiswa tersebut"
+            "sepulang kuliah, kamu langsung mengurus berkas yang diperlukan dan mengirimkannya ke pihak pemberi beasiswa"
+        "Tidak daftar":
+            "Kamu memutuskan untuk tidak mendaftar beasiswa tersebut"
 
     jump showKegiatan
-    
+
+label pengumumanBeasiswa:
+    scene bedroom with Dissolve(0.3)
+    "Hari pengumuman penerima beasiswa pun tiba"
+    "Kamu langsung membuka halaman daftar penerima beasiswa"
+
+    if(nilaiSKS >= 132):
+        "Kamu melihat namamu di daftar penerima beasiswa"
+    else:
+        $ getScholarship = 0
+        "Kamu tidak melihat namamu di daftar penerima beasiswa"
+    jump showKegiatan

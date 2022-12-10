@@ -1,22 +1,28 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 122, in script
-    jump acaraOrganisasi
-ScriptError: could not find label 'acaraOrganisasi'.
+  File "game/endCheck.rpy", line 13, in script
+    if(turnsCounter <= 136 and getScholarship):
+  File "game/endCheck.rpy", line 15, in <module>
+    elif (turnsCounter <= 136 and (not isEverGotCBelow)):
+NameError: name 'isEverGotCBelow' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 122, in script
-    jump acaraOrganisasi
-  File "renpy/ast.py", line 1757, in execute
-    rv = renpy.game.script.lookup(target)
-  File "renpy/script.py", line 918, in lookup
-    raise ScriptError("could not find label '%s'." % str(original))
-ScriptError: could not find label 'acaraOrganisasi'.
+  File "game/endCheck.rpy", line 13, in script
+    if(turnsCounter <= 136 and getScholarship):
+  File "renpy/ast.py", line 1898, in execute
+    if renpy.python.py_eval(condition):
+  File "renpy/python.py", line 2276, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "renpy/python.py", line 2269, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/endCheck.rpy", line 15, in <module>
+    elif (turnsCounter <= 136 and (not isEverGotCBelow)):
+NameError: name 'isEverGotCBelow' is not defined
 
 Windows-10-10.0.19041
 Ren'Py 7.4.11.2266
 Road to Success 1.0
-Sat Dec 10 18:10:51 2022
+Sat Dec 10 18:42:59 2022

@@ -1,6 +1,6 @@
 label cumLaude:
     scene conference with Dissolve(0.3)
-    hide screen info_Updatehid
+    hide screen info_Update
 
     "Kamu telah menyelesaikan studimu di kampus ini"
     "Kamu menunggu namamu dipanggil ke atas panggung"
@@ -112,6 +112,7 @@ label overdosis:
     return
 
 label mencobaHalBaru:
+    
     scene franchise with Dissolve(0.3)
     hide screen info_Update
 
@@ -121,3 +122,23 @@ label mencobaHalBaru:
     "Ending 10 - 'Pengusaha Otodidak' tercapai"
 
     return
+
+label lanjutKuliah:
+    scene conference with Dissolve(0.3)
+    hide screen info_Update
+
+    "Kamu telah menyelesaikan studimu di kampus ini"
+    announcer "[nama], Lulus"
+    "Kamu naik ke atas panggung"
+    show professor with Dissolve(0.3)
+    rektor "Selamat ya mas"
+    kamu "Terima kasih pak"
+    hide professor with Dissolve(0.3)
+    
+    scene airport with Dissolve(0.3)
+    "Beberapa hari setelah wisuda, kamu langsung berangkat ke luar negeri untuk melanjutkan kuliah"
+    "Kamu sudah meninggalkan pesan untuk keluarga dan teman-temanmu dan meminta mereka untuk mendoakanmu"
+    "Ending 11 - 'Kuliah di Luar Negeri' tercapai"
+
+    return
+

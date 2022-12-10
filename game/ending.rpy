@@ -36,8 +36,11 @@ label lanjutKuliah:
     hide screen info_Update
 
     "Kamu telah menyelesaikan studimu di kampus ini"
-    "Karena kamu telah mendapatkan beasiswa, kamu tidak terlalu memedulikan nilai yang kamu dapatkan"
-    "Setelah pengukuhan selesai, kamu langsung mempersiapkan diri untuk mengikuti kuliah di jenjang yang lebih tinggi"
+    "Kamu mengikuti jalannya wisuda bersama dengan teman-temanmu"
+    
+    scene airport with Dissolve(0.3)
+    "Beberapa hari setelah wisuda, kamu langsung berangkat ke luar negeri untuk melanjutkan kuliah"
+    "Kamu sudah meninggalkan pesan untuk keluarga dan teman-temanmu dan meminta mereka untuk mendoakanmu"
     "Ending 3 - 'Lanjut kuliah' tercapai"
     return
 
@@ -123,20 +126,6 @@ label mencobaHalBaru:
 
     return
 
-label lanjutKuliah:
-    scene conference with Dissolve(0.3)
-    hide screen info_Update
-
-    "Kamu telah menyelesaikan studimu di kampus ini"
-    "Kamu mengikuti jalannya wisuda bersama dengan teman-temanmu"
-    
-    scene airport with Dissolve(0.3)
-    "Beberapa hari setelah wisuda, kamu langsung berangkat ke luar negeri untuk melanjutkan kuliah"
-    "Kamu sudah meninggalkan pesan untuk keluarga dan teman-temanmu dan meminta mereka untuk mendoakanmu"
-    "Ending 11 - 'Kuliah di Luar Negeri' tercapai"
-
-    return
-
 label bukaStartup:
     scene conference with Dissolve(0.3)
     hide screen info_Update
@@ -149,7 +138,7 @@ label bukaStartup:
     "Kamu dan teman-temanmu ingin membuka lapangan pekerjaan baru sesuai dengan keahlian yang dimiliki"
     "Kamu dan temanmu sepakat bahwa kalian akan membuat startup baru"
     "Dengan modal yang sudah kamu kumpulkan, kamu membantu menanam modal di perusahaan barumu"
-    "Ending 12 - 'Buka Startup' Tercapai"
+    "Ending 11 - 'Buka Startup' Tercapai"
 
     return
 
@@ -165,7 +154,7 @@ label pengusahaKecil:
     "Kamu ingin membuka usaha baru dengan keahlian yang kamu miliki"
     "Modal yang kamu kumpulkan selama kuliah juga sudah mencukupi untuk membuat usaha baru"
     "Walaupun begitu, kamu masih harus mencari orang untuk mengisi posisi penting di usaha kecilmu"
-    "Ending 13 - 'Usaha Kecil' Tercapai"
+    "Ending 12- 'Usaha Kecil' Tercapai"
 
     return
 

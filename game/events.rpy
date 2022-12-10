@@ -519,7 +519,7 @@ label berhentiKuliah:
     jump showKegiatan
 
 label cariBeasiswa:
-    scene campus with Dissolve(0.3)\
+    scene campus with Dissolve(0.3)
     "Kamu melihat poster pendaftaran beasiswa di mading kampus"
     "Beasiswa ini akan memberimu peluang untuk melanjutkan kuliah di luar negeri"
     "Syarat utama untuk mendapatkan beasiswa adalah memiliki nilai bagus dalam 6 semester yang sudah ditempuh"

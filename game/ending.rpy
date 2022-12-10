@@ -137,3 +137,35 @@ label lanjutKuliah:
 
     return
 
+label bukaStartup:
+    scene conference with Dissolve(0.3)
+    hide screen info_Update
+
+    "Kamu telah menyelesaikan studimu di kampus ini"
+    "Kamu mengikuti jalannya wisuda bersama dengan teman-temanmu"
+
+    scene cooperation with Dissolve(0.3)
+
+    "Kamu dan teman-temanmu ingin membuka lapangan pekerjaan baru sesuai dengan keahlian yang dimiliki"
+    "Kamu dan temanmu sepakat bahwa kalian akan membuat startup baru"
+    "Dengan modal yang sudah kamu kumpulkan, kamu membantu menanam modal di perusahaan barumu"
+    "Ending 12 - 'Buka Startup' Tercapai"
+
+    return
+
+label pengusahaKecil:
+    scene conference with Dissolve(0.3)
+    hide screen info_Update
+
+    "Kamu telah menyelesaikan studimu di kampus ini"
+    "Kamu mengikuti jalannya wisuda bersama dengan teman-temanmu"
+
+    scene enterpreneur with Dissolve(0.3)
+
+    "Kamu ingin membuka usaha baru dengan keahlian yang kamu miliki"
+    "Modal yang kamu kumpulkan selama kuliah juga sudah mencukupi untuk membuat usaha baru"
+    "Walaupun begitu, kamu masih harus mencari orang untuk mengisi posisi penting di usaha kecilmu"
+    "Ending 13 - 'Usaha Kecil' Tercapai"
+
+    return
+

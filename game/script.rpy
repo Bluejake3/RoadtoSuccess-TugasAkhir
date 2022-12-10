@@ -140,7 +140,7 @@ label routinesMenu:
         jump kampanyePemilu
     elif(turnsCounter == 98 and panitiaAcara and kaderisasi):
         jump pemiluJurusan
-    elif (turnsCounter == 103 and levelUsaha >= 10):
+    elif (turnsCounter == 103 and levelUsaha >= 20):
         jump berhentiKuliah
     elif(turnsCounter == 105):
         jump cariBeasiswa

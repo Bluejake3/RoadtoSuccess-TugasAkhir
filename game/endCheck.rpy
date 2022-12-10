@@ -12,6 +12,11 @@ label endCheck:
     elif (nilaiSKS >= 144):
         if(turnsCounter <= 136 and getScholarship):
             jump lanjutKuliah
+        elif (levelUsaha >=30):
+            if (levelRelasi >=25):
+                jump bukaStartup
+            else:
+                jump pengusahaKecil
         elif (turnsCounter <= 136 and (not isEverGotCBelow)):
             jump cumLaude
         else:

@@ -128,12 +128,7 @@ label lanjutKuliah:
     hide screen info_Update
 
     "Kamu telah menyelesaikan studimu di kampus ini"
-    announcer "[nama], Lulus"
-    "Kamu naik ke atas panggung"
-    show professor with Dissolve(0.3)
-    rektor "Selamat ya mas"
-    kamu "Terima kasih pak"
-    hide professor with Dissolve(0.3)
+    "Kamu mengikuti jalannya wisuda bersama dengan teman-temanmu"
     
     scene airport with Dissolve(0.3)
     "Beberapa hari setelah wisuda, kamu langsung berangkat ke luar negeri untuk melanjutkan kuliah"

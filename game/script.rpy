@@ -17,6 +17,7 @@ define rektor = Character("Rektor")
 
 label start:
     $ SKSAmbil = 18
+    $ profitMultiplier = 0
     $ isIntrovert = 0
     $ turnsCounter = 0
     $ stress = 0

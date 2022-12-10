@@ -32,7 +32,8 @@ screen infoLengkapScreen:
 
     text "Level Usaha: [levelUsahaTotal] ([levelUsahaEXP]%)" xpos 0.1 ypos 0.2
     text "Total Modal Usaha: [totalCapital]" xpos 0.1 ypos 0.25
-    text "Saldo di bank: [saldo]" xpos 0.1 ypos 0.3
-    text "Level relasi: [levelRelasi]" xpos 0.1 ypos 0.35
+    text "Keuntungan usaha Mingguan: [profit] ([profitMultiplier]%)" xpos 0.1 ypos 0.3
+    text "Saldo di bank: [saldo]" xpos 0.1 ypos 0.35
+    text "Level relasi: [levelRelasi]" xpos 0.1 ypos 0.40
     
     

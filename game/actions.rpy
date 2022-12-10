@@ -37,7 +37,7 @@ label rekreasi:
                 $ stress -= 20
             else:
                 $ stress -= 15
-            $ money -= 50
+            $ money -= 500
             "Kamu bermain sendiri di kos"
         "Nongkrong bersama teman-teman":
             scene cafe with Dissolve(0.3)
@@ -45,15 +45,20 @@ label rekreasi:
                 $ stress -=15
             else:
                 $ stress -= 25
-            $ money -= 100
+            $ money -= 1000
+            if (stress<0):
+                $ stress = 0
             "Kamu bercengkrama dengan temanmu dan membeli beberapa kopi"
         "Pergi ke Mall" if turnsCounter >= 34:
             scene mall with Dissolve(0.3)
-            $ stress -= 40
-            $ money -= 400
+            $ stress -= 80
+            $ money -= 5000
+            if (stress<0):
+                $ stress = 0
             "Kamu pergi ke mall untuk melepas penat"
-    if (stress<0):
-        $ stress = 0
+        "Kembali":
+            jump showKegiatan
+    
     jump endCheck
 
 label menabung:
@@ -101,8 +106,9 @@ label usaha:
         $ levelUsaha = totalCapital // 1000
         $ levelUsahaEXP = (totalCapital % 1000) / 10   
         $ levelUsahaTotal = levelUsahaModifier + levelUsaha
-        $ profit = (totalCapital / 10) + (totalCapital/200 * (levelUsahaTotal - 1))
-        $ usahaStressModifier = totalCapital // 2500
+        $ profitMultiplier = (10+(levelUsahaTotal*0.5))/4
+        $ profit = math.floor(totalCapital * profitMultiplier/100)
+        $ usahaStressModifier = totalCapital // 5000
         
         "Kamu memasukkan modal sejumlah [capital], jumlah keuntunganmu setiap minggu akan bertambah menjadi [profit]"
 

@@ -327,7 +327,7 @@ label diterimaOrganisasi:
 
     jump showKegiatan
 
-label eventOrganisasi:
+label acaraOrganisasi:
     scene campus with Dissolve(0.3)
     "Kamu melihat ada brosur mengenai perekrutan panitia acara besar di jurusanmu"
     "Acara itu akan mengundang artis dari ibukota"
@@ -387,9 +387,11 @@ label nontonAcaraBesar:
             "Setelah itu, kamu menonton acara itu sampai selesai"
             "Acara itu berlangsung sangat meriah"
             if (isIntrovert):
-                $ stress -= 10
+                $ stress -= 20
             else:
-                $ stress -= 15
+                $ stress -= 25
+        "Lewati Acara":
+            "Kamu melewatkan acara besar tersebut"
     jump showKegiatan
 
 label pameranUsaha:
@@ -410,7 +412,7 @@ label pameranUsaha:
             scene exhibition with Dissolve(0.3)
             "Di hari pameran"
             "Kamu membuka stand untuk menjual produkmu"
-            $ money += (300 * levelUsahaTotal)
+            $ money += (400 * levelUsahaTotal)
             if(isIntrovert):
                 $ stress += 10
             else:

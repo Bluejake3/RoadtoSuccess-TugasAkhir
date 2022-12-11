@@ -10,17 +10,18 @@ label endCheck:
     elif (stress >= 100):
         jump gila 
     elif (nilaiSKS >= 144):
-        if(turnsCounter <= 136 and getScholarship):
-            jump lanjutKuliah
+        if(turnsCounter <= 136):
+            if(getScholarship):
+                jump lanjutKuliah
+            elif (not isEverGotCBelow):
+                jump cumLaude
         elif (levelUsaha >=30):
             if (levelRelasi >=25):
                 jump bukaStartup
             else:
                 jump pengusahaKecil
-        elif (turnsCounter <= 136 and (not isEverGotCBelow)):
-            jump cumLaude
         else:
-            jump Lulus
+            jump lulus
     elif(turnsCounter >= 238 or (turnsCounter==34 and nilaiSKS <18)):
         jump gagal
     jump routinesMenu

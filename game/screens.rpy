@@ -269,7 +269,7 @@ screen quick_menu():
 init python:
     config.overlay_screens.append("quick_menu")
 
-default quick_menu = True
+default quick_menu = False
 
 style quick_button is default
 style quick_button_text is button_text
@@ -312,7 +312,7 @@ screen navigation():
 
         textbutton _("Muat") action ShowMenu("load")
 
-        textbutton _("Setting") action ShowMenu("preferences")
+        textbutton _("Pengaturan") action ShowMenu("preferences")
 
         if _in_replay:
 

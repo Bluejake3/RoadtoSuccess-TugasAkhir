@@ -2,11 +2,13 @@
 errors listed below, and try again.
 
 
-The label lanjutKuliah is defined twice, at File "game/ending.rpy", line 34:
-label lanjutKuliah:
-and File "game/ending.rpy", line 126:
-label lanjutKuliah:
+File "game/endCheck.rpy", line 5: expected 'label_name_declare' not found.
+    call takeSavings from
+                         ^
 
+File "game/endCheck.rpy", line 7: expected 'label_name_declare' not found.
+    call takeCapitals from
+                          ^
 
 Ren'Py Version: Ren'Py 7.4.11.2266
-Sat Dec 10 20:15:43 2022
+Sun Dec 11 13:47:43 2022

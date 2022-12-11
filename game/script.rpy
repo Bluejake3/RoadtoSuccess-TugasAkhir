@@ -1,6 +1,8 @@
 ﻿# The script of the game goes in this file.
 init python:
     import math
+    config.has_autosave = False
+    config.has_quicksave = False
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 

@@ -2,9 +2,9 @@ label endCheck:
 
     if(money < 0):
         if (saving > 0):
-            call takeSavings from _call_takeSavings
+            call takeSavings
         elif (totalCapital > 0):
-            call takeCapitals from _call_takeCapitals
+            call takeCapitals
         else:
             jump miskin
     elif (stress >= 100):

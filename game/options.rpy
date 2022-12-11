@@ -37,7 +37,7 @@ define gui.about = _p("""
 ## bangunan distribusi. Ini harus hanya berisi karakter ASCII-saja, dan tidak
 ## boleh mengandung  spasi, koma, atau kutip.
 
-define build.name = "sample"
+define build.name = "RoadtoSuccess"
 
 
 ## Suara dan musik #############################################################

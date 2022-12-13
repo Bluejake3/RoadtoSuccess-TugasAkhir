@@ -71,9 +71,10 @@ label start:
             "Setiap hari, kamu akan diberikan 4 opsi kegiatan"
             "Opsi pertama adalah belajar. Opsi ini akan menambah nilaimu, tetapi akan menambah stress"
             "Opsi bekerja berfungsi untuk menambah uang selain dari uang yang didapatkan tiap giliran. Opsi ini akan menambah stres"
-            "Opsi berikutnya adalah opsi menabung. Di sini kamu dapat menginvestasikan uangmu dan menerima bunga dari bank"
+            "Opsi berikutnya adalah opsi menabung. Di sini kamu dapat memasukkan uangmu ce bank dan menerima bunga dari bank"
             "Opsi terakhir adalah Pergi Rekreasi. Opsi ini mengurangi banyak stres dengan menggunakan sejumlah uang"
             "Nilai yang kamu dapatkan pada semester ini akan berpengaruh pada total nilai yang kamu dapat di game"
+            "Beberapa giliran akan memiliki sebuah event, pertimbangkan opsi yang diberikan pada setiap event"
             "Pertimbangkan uang, stress, dan nilai dalam memilih opsi yang ada"
         "Tidak":
             "Baik, karena kamu sudah paham, ke pertanyaan selanjutnya ya"

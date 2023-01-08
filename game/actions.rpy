@@ -69,8 +69,10 @@ label menabung:
         teller "Selamat datang di bank, ada yang bisa kami bantu"
         "Tarik Tunai":
             python:
-                saving = int(renpy.input("Berapa uang yang ingin kamu ambil?", length=10))
-            
+                try:
+                    saving = int(renpy.input("Berapa uang yang ingin kamu ambil?", length=10))
+                except ValueError:
+                    saving = 0
             if (saving>saldo):
                 teller "Mohon maaf, saldo anda kurang"
             else:
@@ -80,8 +82,10 @@ label menabung:
                 teller "Penarikan sejumlah [saving] berhasil. Saldomu sekarang [saldo]"
         "Setor Tunai":
             python:
-                saving = int(renpy.input("Berapa uang yang ingin kamu setor?", length=10))
-
+                try:
+                    saving = int(renpy.input("Berapa uang yang ingin kamu setor?", length=10))
+                except ValueError:
+                    saving = 0
             if (saving>money):
                 teller "Mohon maaf, uang anda kurang"
             else:
@@ -97,9 +101,12 @@ label menabung:
 label usaha:
     show screen infoUpdate
     scene office with Dissolve(0.3)
-    python:    
-        capital = int(renpy.input("Kamu mau mengembangkan usaha dengan modal berapa?", length=10))
-
+    python:
+        try:    
+            capital = int(renpy.input("Kamu mau mengembangkan usaha dengan modal berapa?", length=10))
+        except ValueError:
+            capital = 0
+            
     if (capital <= money):
         $ totalCapital += capital
         $ money -= capital

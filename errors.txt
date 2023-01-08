@@ -2,13 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/endCheck.rpy", line 5: expected 'label_name_declare' not found.
-    call takeSavings from
-                         ^
+File "game/actions.rpy", line 111: invalid syntax
+    else
+    
 
-File "game/endCheck.rpy", line 7: expected 'label_name_declare' not found.
-    call takeCapitals from
-                          ^
-
-Ren'Py Version: Ren'Py 7.4.11.2266
-Sun Dec 11 13:47:43 2022
+Ren'Py Version: Ren'Py 8.0.3.22090809
+Sun Jan  8 13:06:08 2023

@@ -1,26 +1,26 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/actions.rpy", line 100, in script
+  File "game/actions.rpy", line 106, in script
     python:
-  File "game/actions.rpy", line 101, in <module>
-    capital = int(renpy.input("Kamu mau mengembangkan usaha dengan modal berapa?", length=10))
+  File "game/actions.rpy", line 112, in <module>
+    capital = int(capitalInput)
 ValueError: invalid literal for int() with base 10: ''
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/actions.rpy", line 100, in script
+  File "game/actions.rpy", line 106, in script
     python:
   File "D:\RenPY\renpy-7.4.11-sdk\renpy\ast.py", line 1131, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "D:\RenPY\renpy-7.4.11-sdk\renpy\python.py", line 1061, in py_exec_bytecode
     exec(bytecode, globals, locals)
-  File "game/actions.rpy", line 101, in <module>
-    capital = int(renpy.input("Kamu mau mengembangkan usaha dengan modal berapa?", length=10))
+  File "game/actions.rpy", line 112, in <module>
+    capital = int(capitalInput)
 ValueError: invalid literal for int() with base 10: ''
 
 Windows-10-10.0.19044 AMD64
 Ren'Py 8.0.3.22090809
 Road to Success 1.0
-Sun Jan  8 11:59:11 2023
+Sun Jan  8 13:06:41 2023

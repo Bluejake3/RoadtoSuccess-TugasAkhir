@@ -1,6 +1,6 @@
 screen infoUpdate:
     add "statusback" xpos 0.0 ypos 0.0 
-    text "Sem. [Semester] Mingg. [week]" xpos 0.0 ypos 0.0
+    text "Sem. [Semester] Ming. [week]" xpos 0.0 ypos 0.0
     text "Uang: [money]" xpos 0.2 ypos 0.0
     text "Stress: [stress]/100" xpos 0.4 ypos 0.0
     text "Nilai: [nilaiSemester]/100" xpos 0.6 ypos 0.0

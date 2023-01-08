@@ -1,26 +1,26 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-IOError: [Errno 2] No such file or directory: u'C:\\Users\\hp\\AppData\\Roaming/RenPy/sample-1660812598\\persistent.1670741485.tmp'
+  File "game/actions.rpy", line 100, in script
+    python:
+  File "game/actions.rpy", line 101, in <module>
+    capital = int(renpy.input("Kamu mau mengembangkan usaha dengan modal berapa?", length=10))
+ValueError: invalid literal for int() with base 10: ''
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "renpy/bootstrap.py", line 331, in bootstrap
-    renpy.main.main()
-  File "renpy/main.py", line 665, in main
-    renpy.persistent.update(True)
-  File "renpy/persistent.py", line 395, in update
-    save()
-  File "renpy/persistent.py", line 411, in save
-    renpy.loadsave.location.save_persistent(data)
-  File "renpy/savelocation.py", line 496, in save_persistent
-    l.save_persistent(data)
-  File "renpy/savelocation.py", line 347, in save_persistent
-    with open(fn_tmp, "wb") as f:
-IOError: [Errno 2] No such file or directory: u'C:\\Users\\hp\\AppData\\Roaming/RenPy/sample-1660812598\\persistent.1670741485.tmp'
+  File "game/actions.rpy", line 100, in script
+    python:
+  File "D:\RenPY\renpy-7.4.11-sdk\renpy\ast.py", line 1131, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "D:\RenPY\renpy-7.4.11-sdk\renpy\python.py", line 1061, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/actions.rpy", line 101, in <module>
+    capital = int(renpy.input("Kamu mau mengembangkan usaha dengan modal berapa?", length=10))
+ValueError: invalid literal for int() with base 10: ''
 
-Windows-10-10.0.19041
-Ren'Py 7.4.11.2266
+Windows-10-10.0.19044 AMD64
+Ren'Py 8.0.3.22090809
 Road to Success 1.0
-Sun Dec 11 13:52:28 2022
+Sun Jan  8 11:59:11 2023

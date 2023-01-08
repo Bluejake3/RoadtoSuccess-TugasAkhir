@@ -50,6 +50,7 @@ label start:
     $ mingguKampanye = [96, 97]
     $ levelRelasi = 0
     $ getScholarship = 0
+    $ capital = 0
     scene city with fade
     play music "audio/song1.mp3"
 

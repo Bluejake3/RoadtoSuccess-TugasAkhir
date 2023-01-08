@@ -69,7 +69,7 @@ label menabung:
         teller "Selamat datang di bank, ada yang bisa kami bantu"
         "Tarik Tunai":
             python:
-                saving = int(renpy.input("Berapa uang yang ingn kamu ambil?", length=10))
+                saving = int(renpy.input("Berapa uang yang ingin kamu ambil?", length=10))
             
             if (saving>saldo):
                 teller "Mohon maaf, saldo anda kurang"
@@ -80,7 +80,7 @@ label menabung:
                 teller "Penarikan sejumlah [saving] berhasil. Saldomu sekarang [saldo]"
         "Setor Tunai":
             python:
-                saving = int(renpy.input("Berapa uang yang ingn kamu ambil?", length=10))
+                saving = int(renpy.input("Berapa uang yang ingin kamu setor?", length=10))
 
             if (saving>money):
                 teller "Mohon maaf, uang anda kurang"

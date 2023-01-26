@@ -45,7 +45,6 @@ label lulus:
         else:
             "Ending 2 - 'Lulus Kuliah' tercapai"
 
-    
     return 
 
 label gagal:

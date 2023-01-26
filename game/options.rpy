@@ -31,6 +31,8 @@ define config.version = "1.2"
 
 define gui.about = _p("""\
 BGM: "Tanukichi no Bouken" by DOVA-SYNDROME
+
+Sound effects from Pixabay
 """)
 
 

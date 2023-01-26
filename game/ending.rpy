@@ -22,7 +22,7 @@ label lulus:
         "Ending 3 - 'Lanjut kuliah' tercapai"
         return
     
-    else if (levelUsaha >=30):
+    elif (levelUsaha >=30):
         if (levelRelasi >=25):
             scene cooperation with Dissolve(0.3)
 

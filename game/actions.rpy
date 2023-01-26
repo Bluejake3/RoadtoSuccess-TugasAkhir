@@ -38,6 +38,8 @@ label rekreasi:
             else:
                 $ stress -= 15
             $ money -= 500
+            if (stress<0):
+                $ stress = 0
             "Kamu bermain sendiri di kos"
         "Nongkrong bersama teman-teman":
             scene cafe with Dissolve(0.3)

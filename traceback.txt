@@ -1,26 +1,68 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-IOError: [Errno 2] No such file or directory: u'C:\\Users\\hp\\AppData\\Roaming/RenPy/sample-1660812598\\persistent.1670741485.tmp'
+While loading <renpy.display.im.Image object ('images/office.jpg') at 0x0000000005dc1550>:
+  File "game/actions.rpy", line 105, in script
+    scene office with Dissolve(0.3)
+OSError: Couldn't find file 'images/office.jpg'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "renpy/bootstrap.py", line 331, in bootstrap
-    renpy.main.main()
-  File "renpy/main.py", line 665, in main
-    renpy.persistent.update(True)
-  File "renpy/persistent.py", line 395, in update
-    save()
-  File "renpy/persistent.py", line 411, in save
-    renpy.loadsave.location.save_persistent(data)
-  File "renpy/savelocation.py", line 496, in save_persistent
-    l.save_persistent(data)
-  File "renpy/savelocation.py", line 347, in save_persistent
-    with open(fn_tmp, "wb") as f:
-IOError: [Errno 2] No such file or directory: u'C:\\Users\\hp\\AppData\\Roaming/RenPy/sample-1660812598\\persistent.1670741485.tmp'
+  File "game/actions.rpy", line 105, in script
+    scene office with Dissolve(0.3)
+  File "D:\RenPY\renpy-7.4.11-sdk\renpy\ast.py", line 1658, in execute
+    renpy.exports.with_statement(trans, paired=paired)
+  File "D:\RenPY\renpy-7.4.11-sdk\renpy\exports.py", line 1657, in with_statement
+    return renpy.game.interface.do_with(trans, paired, clear=clear)
+  File "D:\RenPY\renpy-7.4.11-sdk\renpy\display\core.py", line 2798, in do_with
+    return self.interact(trans_pause=True,
+  File "D:\RenPY\renpy-7.4.11-sdk\renpy\display\core.py", line 3377, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "D:\RenPY\renpy-7.4.11-sdk\renpy\display\core.py", line 3912, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+  File "D:\RenPY\renpy-7.4.11-sdk\renpy\display\core.py", line 2602, in draw_screen
+    surftree = renpy.display.render.render_screen(
+  File "render.pyx", line 495, in renpy.display.render.render_screen
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "D:\RenPY\renpy-7.4.11-sdk\renpy\display\layout.py", line 884, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "D:\RenPY\renpy-7.4.11-sdk\renpy\display\transition.py", line 378, in render
+    top = render(self.new_widget, width, height, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "D:\RenPY\renpy-7.4.11-sdk\renpy\display\layout.py", line 884, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "D:\RenPY\renpy-7.4.11-sdk\renpy\display\layout.py", line 884, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "D:\RenPY\renpy-7.4.11-sdk\renpy\display\transform.py", line 747, in render
+    return transform_render(self, width, height, st, at)
+  File "accelerator.pyx", line 187, in renpy.display.accelerator.transform_render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "D:\RenPY\renpy-7.4.11-sdk\renpy\display\image.py", line 506, in render
+    return wrap_render(self.target, width, height, st, at)
+  File "D:\RenPY\renpy-7.4.11-sdk\renpy\display\image.py", line 309, in wrap_render
+    rend = render(child, w, h, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "D:\RenPY\renpy-7.4.11-sdk\renpy\display\im.py", line 627, in render
+    return cache.get(self, render=True)
+  File "D:\RenPY\renpy-7.4.11-sdk\renpy\display\im.py", line 295, in get
+    surf = image.load()
+  File "D:\RenPY\renpy-7.4.11-sdk\renpy\display\im.py", line 720, in load
+    raise e
+  File "D:\RenPY\renpy-7.4.11-sdk\renpy\display\im.py", line 685, in load
+    filelike = renpy.loader.load(self.filename)
+  File "D:\RenPY\renpy-7.4.11-sdk\renpy\loader.py", line 820, in load
+    raise IOError("Couldn't find file '%s'." % name)
+OSError: Couldn't find file 'images/office.jpg'.
 
-Windows-10-10.0.19041
-Ren'Py 7.4.11.2266
-Road to Success 1.0
-Sun Dec 11 13:52:28 2022
+Windows-10-10.0.19044 AMD64
+Ren'Py 8.0.3.22090809
+Road to Success 1.2
+Thu Jan 26 09:26:43 2023

@@ -7,7 +7,7 @@ label cumLaude:
     announcer "[nama], Lulus dengan status cum laude"
     "Kamu naik ke atas panggung"
     show professor with Dissolve(0.3)
-    rektor "Selamat ya mas"
+    rektor "Selamat ya nak"
     kamu "Terima kasih pak"
     hide professor with Dissolve(0.3)
     "Kamu lega bahwa studimu telah selesai dan berharap agar ilmu yang kamu dapatkan bermanfaat"
@@ -23,7 +23,7 @@ label lulus:
     announcer "[nama], Lulus"
     "Kamu naik ke atas panggung"
     show professor with Dissolve(0.3)
-    rektor "Selamat ya mas"
+    rektor "Selamat ya nak"
     kamu "Terima kasih pak"
     hide professor with Dissolve(0.3)
     "Kamu lega bahwa studimu telah selesai dan berharap agar ilmu yang kamu dapatkan bermanfaat"

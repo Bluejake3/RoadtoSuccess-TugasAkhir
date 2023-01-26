@@ -4,7 +4,7 @@ label lulus:
 
     "Kamu telah menyelesaikan studimu di kampus ini"
     "Kamu menunggu namamu dipanggil ke atas panggung"
-    if (not isEverGotCBelow):
+    if (not isEverGotCBelow and turnsCounter <= 136):
         announcer "[nama], Lulus dengan status cum laude"
     else:
         announcer "[nama], Lulus"
@@ -15,7 +15,7 @@ label lulus:
     hide professor with Dissolve(0.3)
     "Kamu lega bahwa studimu telah selesai dan berharap agar ilmu yang kamu dapatkan bermanfaat"
 
-    if(getScholarship):
+    if(getScholarship and turnsCounter <= 136):
         scene airport with Dissolve(0.3)
         "Beberapa hari setelah wisuda, kamu langsung berangkat ke luar negeri untuk melanjutkan kuliah"
         "Kamu sudah meninggalkan pesan untuk keluarga dan teman-temanmu dan meminta mereka untuk mendoakanmu"

@@ -23,16 +23,22 @@ define gui.show_name = True
 
 ## Versi Permainan.
 
-define config.version = "1.1"
+define config.version = "1.2"
 
 
 ## Text that is placed on the game's about screen. Place the text between the
 ## triple-quotes, and leave a blank line between paragraphs.
 
 define gui.about = _p("""\
-BGM: "Tanukichi no Bouken" by DOVA-SYNDROME
+BGM: "Tanukichi no Bouken" oleh DOVA-SYNDROME
 
-Sound effects from Pixabay
+Sound effects dan aset gambar dari Pixabay
+
+Foto dari Freepik
+
+Beberapa foto dibuat oleh AI dengan Dall-E
+
+"Interiors" oleh tommerton2010 via flickr
 """)
 
 

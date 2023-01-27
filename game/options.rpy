@@ -34,7 +34,7 @@ BGM: "Tanukichi no Bouken" oleh DOVA-SYNDROME
 
 Sound effects dan aset gambar dari Pixabay
 
-Foto stok dari Freepik dan iStockPhoto
+Foto stok dari Freepik, Unsplash, dan iStock
 
 Beberapa foto dibuat oleh AI dengan Dall-E
 
